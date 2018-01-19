@@ -1,6 +1,6 @@
 {
 	"name": "inspiredminds/contao-remember-language",
-	"description": "Adds Animsition options to pages for page transition effects.",
+	"description": "Contao 4 bundle to redirect to a language saved in a cookie.",
 	"keywords": ["contao", "animsition", "page", "transition"],
 	"type": "contao-bundle",
 	"homepage": "http://www.inspiredminds.at",
