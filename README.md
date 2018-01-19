@@ -24,9 +24,11 @@ to your `AppKernel.php`.
 After installation you will see two new system settings:
 
 * __Use language cookie__
+
   This will enable the automatic redirect according to the stored language cookie.
 
 * __Save language cookie__
+
   This will enable the automatic generation of the language cookie on each 
   request that contains the language parameter.
 
