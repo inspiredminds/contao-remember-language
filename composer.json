@@ -1,7 +1,7 @@
 {
 	"name": "inspiredminds/contao-remember-language",
 	"description": "Contao 4 bundle to redirect to a language saved in a cookie.",
-	"keywords": ["contao", "animsition", "page", "transition"],
+	"keywords": ["contao", "cookie", "language", "remember"],
 	"type": "contao-bundle",
 	"homepage": "http://www.inspiredminds.at",
 	"license": "LGPL-3.0-or-later",
