@@ -34,4 +34,5 @@ After installation you will see two new system settings:
 
 The cookie's name is `forceLanguage` in case you do not want to use the second 
 option and rather generate the cookie yourself (e.g. if you want to provide a 
-language selection pop-up).
+language selection pop-up). The content of the cookie should be the same as used
+in the site structure, e.g. `en` or `en-US` etc.
