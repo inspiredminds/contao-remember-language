@@ -7,3 +7,4 @@ services:
     contao_remember_language.listener.frontend:
         class: InspiredMinds\ContaoRememberLanguage\EventListener\FrontendListener
         arguments: ['@service_container']
+        public: true
