@@ -101,7 +101,7 @@ class FrontendListener implements FrameworkAwareInterface
                         $strUrl = $this->container->get('router')->generate('contao_index', $arrParams);
                         $strUrl = substr($strUrl, \strlen($envAdapter->get('path')) + 1);
 
-                        $controllerAdapter->redirect($strUrl, 301);
+                        $controllerAdapter->redirect($strUrl, 302);
                     }
 
                     // Redirect if the page alias is not "index" or "/" (see #8498, #8560 and #1210)
