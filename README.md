@@ -1,4 +1,4 @@
-[![](https://img.shields.io/maintenance/yes/2018.svg)](https://github.com/inspiredminds/contao-remember-language)
+[![](https://img.shields.io/maintenance/yes/2020.svg)](https://github.com/inspiredminds/contao-remember-language)
 [![](https://img.shields.io/packagist/v/inspiredminds/contao-remember-language.svg)](https://packagist.org/packages/inspiredminds/contao-remember-language)
 [![](https://img.shields.io/packagist/dt/inspiredminds/contao-remember-language.svg)](https://packagist.org/packages/inspiredminds/contao-remember-language)
 
