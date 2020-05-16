@@ -1,16 +1,14 @@
 <?php
 
-/**
- * This file is part of the ContaoRememberLanguage Bundle.
- *
- * (c) inspiredminds <https://github.com/inspiredminds>
- *
- * @package   ContaoRememberLanguage
- * @author    Fritz Michael Gschwantner <https://github.com/fritzmg>
- * @license   LGPL-3.0+
- * @copyright inspiredminds 2018
- */
+declare(strict_types=1);
 
+/*
+ * This file is part of the ContaoRememberLanguageBundle.
+ *
+ * (c) inspiredminds
+ *
+ * @license LGPL-3.0-or-later
+ */
 
 namespace InspiredMinds\ContaoRememberLanguage;
 

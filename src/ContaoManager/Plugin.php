@@ -1,22 +1,22 @@
 <?php
 
-/**
- * This file is part of the ContaoRememberLanguage Bundle.
- *
- * (c) inspiredminds <https://github.com/inspiredminds>
- *
- * @package   ContaoRememberLanguage
- * @author    Fritz Michael Gschwantner <https://github.com/fritzmg>
- * @license   LGPL-3.0+
- * @copyright inspiredminds 2018
- */
+declare(strict_types=1);
 
+/*
+ * This file is part of the ContaoRememberLanguageBundle.
+ *
+ * (c) inspiredminds
+ *
+ * @license LGPL-3.0-or-later
+ */
 
 namespace InspiredMinds\ContaoRememberLanguage\ContaoManager;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use InspiredMinds\ContaoRememberLanguage\ContaoRememberLanguageBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -26,8 +26,8 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('InspiredMinds\ContaoRememberLanguage\ContaoRememberLanguageBundle')
-                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
+            BundleConfig::create(ContaoRememberLanguageBundle::class)
+                ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }

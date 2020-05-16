@@ -5,34 +5,30 @@
 Contao Remember Language
 =====================
 
-Contao 4 bundle to redirect to a language saved in a cookie.
+Contao 4 extension to redirect to a language saved in a cookie when using `contao.prepend_locale: true` and requesting the domain without any language parameter in the URL.
 
-## Installation
+## Configuration
 
-Require the bundle via composer:
+The extension allows you to configure the following:
+
+* Enable or disable the redirect.
+* Enable or disable saving the current language in a cookie.
+* The name of the cookie.
+
+```yml
+# Default configuration for extension with alias: "contao_remember_language"
+contao_remember_language:
+
+    # Enables the automatic redirect to the saved language.
+    enable_redirect:      true
+
+    # Saves the current language as a cookie.
+    save_language:        true
+
+    # Name of the cookie where the language is saved.
+    cookie_name:          contao_remember_language
 ```
-composer require inspiredminds/contao-remember-language
-```
-If you use the Contao Standard Edition, you will have to add
-```php
-new InspiredMinds\ContaoRememberLanguage\ContaoRememberLanguageBundle()
-```
-to your `AppKernel.php`.
 
-## Usage
+## Caching
 
-After installation you will see two new system settings:
-
-* __Use language cookie__
-
-  This will enable the automatic redirect according to the stored language cookie.
-
-* __Save language cookie__
-
-  This will enable the automatic generation of the language cookie on each 
-  request that contains the language parameter.
-
-The cookie's name is `forceLanguage` in case you do not want to use the second 
-option and rather generate the cookie yourself (e.g. if you want to provide a 
-language selection pop-up). The content of the cookie should be the same as used
-in the site structure, e.g. `en` or `en-US` etc.
+If you use caching, make sure to either add the configured cookie name (`contao_remember_language` by default) to the `COOKIE_BLACKLIST` or conversely make sure to _not_ add the configured cookie to your `COOKIE_WHITELIST`. The information of the cookie is only relevant for requests to `https://example.org/` (without any path/parameter), and since Contao (at least up to Contao `4.9`) always redirects such requests (with a status code other than `301`) when using `contao.prepend_locale: true`, such requests are never cached. Thus, it is not necessary to prevent caching when the request contains the cookie.

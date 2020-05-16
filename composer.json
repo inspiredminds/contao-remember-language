@@ -1,9 +1,9 @@
 {
 	"name": "inspiredminds/contao-remember-language",
-	"description": "Contao 4 bundle to redirect to a language saved in a cookie.",
+	"description": "Contao 4 extension to redirect to a language saved in a cookie.",
 	"keywords": ["contao", "cookie", "language", "remember"],
 	"type": "contao-bundle",
-	"homepage": "http://www.inspiredminds.at",
+	"homepage": "https://github.com/inspiredminds/contao-remember-language",
 	"license": "LGPL-3.0-or-later",
 	"authors": [
 		{
@@ -14,17 +14,28 @@
 		}
 	],
 	"support": {
-		"email": "fmg@inspiredminds.at",
 		"issues": "https://github.com/inspiredminds/contao-remember-language/issues",
 		"source": "https://github.com/inspiredminds/contao-remember-language",
 		"forum": "https://community.contao.org/de"
 	},
+	"funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/fritzmg"
+        }
+    ],
 	"require": {
-		"php": ">=5.4",
-		"contao/core-bundle": "^4.4"
+		"php": ">=7.1",
+		"contao/core-bundle": "^4.9",
+        "symfony/config": "^4.4",
+        "symfony/dependency-injection": "^4.4",
+        "symfony/event-dispatcher": "^4.4",
+        "symfony/http-foundation": "^4.4",
+        "symfony/http-kernel": "^4.4",
+        "symfony/routing": "^4.4"
 	},
 	"require-dev": {
-		 "contao/manager-plugin": "^2.0"
+		"friendsofphp/php-cs-fixer": "^2.16"
 	},
 	"autoload": {
 		"psr-4": {
