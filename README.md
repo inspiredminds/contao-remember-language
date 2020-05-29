@@ -31,4 +31,4 @@ contao_remember_language:
 
 ## Caching
 
-If you use caching, make sure to either add the configured cookie name (`contao_remember_language` by default) to the `COOKIE_BLACKLIST` or conversely make sure to _not_ add the configured cookie to your `COOKIE_WHITELIST`. The information of the cookie is only relevant for requests to `https://example.org/` (without any path/parameter), and since Contao (at least up to Contao `4.9`) always redirects such requests (with a status code other than `301`) when using `contao.prepend_locale: true`, such requests are never cached. Thus, it is not necessary to prevent caching when the request contains the cookie.
+If you use caching, make sure to _not_ add the configured cookie to your `COOKIE_WHITELIST`. The information of the cookie is only relevant for requests to `https://example.org/` (without any path/parameter), and since Contao (at least up to Contao `4.9`) always redirects such requests (with a status code other than `301`) when using `contao.prepend_locale: true`, such requests are never cached. Thus, it is not necessary to prevent caching when the request contains the cookie.
