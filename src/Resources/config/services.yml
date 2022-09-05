@@ -1,10 +1,7 @@
 services:
   InspiredMinds\ContaoRememberLanguage\EventListener\KernelRequestSubscriber:
     arguments:
-      - '@contao.routing.scope_matcher'
-      - '@router'
       - '%contao.locales%'
-      - '%contao.prepend_locale%'
       - '%contao_remember_language.enable_redirect%'
       - '%contao_remember_language.cookie_name%'
     tags:

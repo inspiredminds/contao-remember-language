@@ -59,7 +59,7 @@ class KernelResponseSubscriber implements EventSubscriberInterface
     {
         return [
             KernelEvents::RESPONSE => [
-                ['onKernelResponse'],
+                ['onKernelResponse', -128],
             ],
         ];
     }
